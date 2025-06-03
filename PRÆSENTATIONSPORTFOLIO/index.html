@@ -12,7 +12,76 @@
     <!-- Vises i bowser -->
     <title>somoddesign.dk</title>
     <!-- Linker til css-->
+    <link rel="stylesheet" href="cs<!-- Angiver HTML5 som dokumenttype -->
+<!DOCTYPE html>
+
+<!-- Angiver sproget som dansk -->
+<html lang="da">
+  <!-- Head: Sektion til information om siden - usynlige oplysninger -->
+  <head>
+    <!-- Tegnsætning-->
+    <meta charset="UTF-8" />
+    <!-- Gøres responsiv -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Vises i bowser -->
+    <title>somoddesign.dk</title>
+    <!-- Linker til css-->
     <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!-- Body: alt på siden - det brugeren ser -->
+  <body>
+    <header class="navbar">
+      <div class="navbar__container">
+        <!-- SVG-logo (som fil) -->
+        <a href="#" class="navbar__logo">
+          <img
+            src="billeder/logo.svg"
+            alt="Mit logo"
+            class="navbar__logo-image"
+          />
+        </a>
+
+        <!-- Menu -->
+        <nav class="navbar__menu">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="#hjem" class="navbar__link">Hjem</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#om" class="navbar__link">Om mig</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#projekter" class="navbar__link">Projekter</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#kontakt" class="navbar__link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero__content">
+        <div class="hero__text">
+          <h1>Velkommen til min portfolio!</h1>
+          <p>
+            Jeg hedder Ana, og er 29 år gammel. Jeg er multimediedesigner og jeg
+            hjælper caféer med at formidle deres atmosfære og værdier gennem
+            visuelt design. Jeg brænder for at bringe dine digitale og æstetiske
+            drømme til live - og skabe et visuelt udtryk, som dine gæster kan
+            mærke gennem skærmen.
+          </p>
+        </div>
+        <div class="hero__image">
+          <img src="billeder/hero.png" alt="Portræt eller designbillede" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+s/style.css" />
   </head>
 
   <!-- Body: alt på siden - det brugeren ser -->
