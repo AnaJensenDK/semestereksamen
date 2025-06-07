@@ -5,41 +5,30 @@
 <html lang="da">
   <!-- Head: Sektion til information om siden - usynlige oplysninger -->
   <head>
-    <!-- Tegnsætning-->
     <meta charset="UTF-8" />
-    <!-- Gøres responsiv -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Vises i bowser -->
-    <title>somoddesign.dk</title>
-    <!-- Linker til css-->
-    <link rel="stylesheet" href="cs<!-- Angiver HTML5 som dokumenttype -->
-<!DOCTYPE html>
-
-<!-- Angiver sproget som dansk -->
-<html lang="da">
-  <!-- Head: Sektion til information om siden - usynlige oplysninger -->
-  <head>
     <!-- Tegnsætning-->
-    <meta charset="UTF-8" />
-    <!-- Gøres responsiv -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Vises i bowser -->
+    <!-- Gøres responsiv -->
     <title>somoddesign.dk</title>
-    <!-- Linker til css-->
+    <!-- Vises i bowser -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Linker til css-->
   </head>
 
   <!-- Body: alt på siden - det brugeren ser -->
   <body>
+    <!-- Header -->
     <header class="navbar">
+      <!-- Navbar: Gør det muligt at style via css som en navigation-->
       <div class="navbar__container">
-        <!-- SVG-logo (som fil) -->
+        <!-- en boks (container), som holder og organiserer indholdet i en menulinje (navigation bar) -->
         <a href="#" class="navbar__logo">
           <img
             src="billeder/logo.svg"
             alt="Mit logo"
             class="navbar__logo-image"
           />
+          <!-- SVG-logo (som fil) -->
         </a>
 
         <!-- Menu -->
@@ -67,23 +56,42 @@
         <div class="hero__text">
           <h1>Velkommen til min portfolio!</h1>
           <p>
-            Jeg hedder Ana, og er 29 år gammel. Jeg er multimediedesigner og jeg
-            hjælper caféer med at formidle deres atmosfære og værdier gennem
-            visuelt design. Jeg brænder for at bringe dine digitale og æstetiske
-            drømme til live - og skabe et visuelt udtryk, som dine gæster kan
-            mærke gennem skærmen.
+            Jeg hedder Ana, og er 29 år gammel. Jeg er multimediedesigner <br />
+            og jeg hjælper caféer med at formidle deres atmosfære og værdier
+            gennem visuelt design. Jeg brænder for at bringe dine digitale og
+            <br />
+            æstetiske drømme til live - og skabe et visuelt udtryk, som dine
+            <br />
+            gæster kan mærke gennem skærmen.
           </p>
+
+          <p>Er du nysgerrig på hvem jeg er?</p>
+
+          <!-- Læs mere her knap-->
+          <a href="#læsmereher" class="hero__button">LÆS MERE HER</a>
         </div>
         <div class="hero__image">
           <img src="billeder/hero.png" alt="Portræt eller designbillede" />
         </div>
       </div>
     </section>
-  </body>
-</html>
-s/style.css" />
-  </head>
 
-  <!-- Body: alt på siden - det brugeren ser -->
-  <body></body>
+    <section class="list-section">
+      <div class="list-section__content">
+        <div class="list-section__images">
+          <img src="billeder/før.png" alt="Billede 1" />
+          <img src="billeder/efter.png" alt="Billede 2" />
+        </div>
+        <div class="list-section__text">
+          <h2>Har du brug for:</h2>
+          <ul>
+            <li>Oprettelse eller optimering af dit webdesign?</li>
+            <li>Kreativ content creation tilpasset alle platforme?</li>
+            <li>Et nyt unikt logo?</li>
+            <li>Udtryksfuldt videoproduktion og fotografering?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
