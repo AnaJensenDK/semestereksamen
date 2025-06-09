@@ -36,46 +36,51 @@ h3 {
   max-width: 1200px; /* Holder navbarens indhold max 1200px bredt */
   margin: 0 auto; /* 0: top/bottom   auto: left/right */
   padding: 0.5rem 0.5rem; /* Padding fra indhold til sider */
-  display: flex; /* Navbar */
-  justify-content: space-between; /* Navbar */
-  align-items: center; /* Navbar */
+  display: flex; /* Flex container: indhold på linje  */
+  align-items: center; /* Centreret */
+  justify-content: space-between; /* Fordeles horisontalt */
 }
 
 .navbar__logo-image {
-  height: 120px;
+  height: 120px; /* Logo højde */
+  width: auto; /* Bevarer billedets proportioner */
 }
 
 .navbar__list {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+  list-style: none; /* Fjerner punkt eller tal foran */
+  display: flex; /* Indhold på linje  */
+  gap: 2rem; /* Mellemrum mellem knapper */
 }
 
+/* Knapper i Navbar */
 .navbar__link {
-  display: inline-block;
-  background-color: #6b4f4b;
-  color: #fdf4f1;
-  font-weight: normal;
-  text-transform: uppercase;
-  padding: 0.6rem 1.5rem;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-  border-radius: 10px 80px 10px 80px;
-  line-height: 1;
-  font-family: "Bebas Neue";
+  display: inline-block; /* Bevarer billedets proportioner */
+  background-color: #6b4f4b; /* Baggrundsfarve på knapper */
+  color: #fdf4f1; /* Skriftfarve tekst knapper */
+  width: 130px; /* Bredde på knapper (alle) */
+  text-align: center; /* Teksten i midten af knap */
+  font-weight: normal; /* Hvor tynd/fed tekst er */
+  text-transform: uppercase; /* Alle bogstaver er store bogstaver  */
+  padding: 0.6rem 1.5rem; /* Padding om tekst i knapper */
+  text-decoration: none; /* Fjerner understregning i link */
+  font-size: 1rem; /* Tekststørrelse: tekst i knapper */
+  transition: background-color 0.3s ease; /* Transition baggrundsfarve til hover */
+  border-radius: 10px 80px 10px 80px; /* Hjørner på knapper */
+  line-height: 1; /* Bevarer billedets proportioner */
+  font-family: "Bebas Neue"; /* Bevarer billedets proportioner */
 }
 
+/* Knapper: hover */
 .navbar__link:hover {
-  background-color: #49322f;
-  transform: scale(1.08);
+  background-color: #49322f; /* Farve på hover effekt  */
+  transform: scale(1.08); /* Skalerer knappen op */
 }
 
 /* Plads til navbar */
 body::before {
   content: "";
   display: block;
-  height: 80px;
+  height: 20px;
 }
 
 /* Hero section */
