@@ -1,93 +1,92 @@
 /* Reset og base */
-* /* 	Vælger alle HTML-elementer */ {
-  margin: 0; /* Fjerner standard-margener (afstand udenfor elementer) */
-  padding: 0; /* Fjerner standard-indryk (afstand indeni elementer) */
-  box-sizing: border-box; /* 	Gør, at padding og border tæller med i elementets samlede bredde/højde */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Skrifttyper */
 
-body {
-  font-family: "Calisto MT", Georgia, serif;
-}
 h1 {
   font-family: "Italiana", serif;
+  font-weight: 400;
 }
 h2 {
   font-family: "Cinzel", serif;
+  font-weight: 400;
 }
 h3 {
-  font-family: "Calisto MT", Georgia, serif;
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 400;
 }
 
 /* Navbar */
 .navbar {
-  position: fixed; /* Navbar rykkes ikke */
-  top: 0; /* Placeres øverst på siden */
-  width: 100%; /* Navbar bredde */
-  background-color: #fdf4f1; /* Baggrundsfarve */
-  color: #fdf4f1; /* Tekstfarve */
-  z-index: 1000; /* Placeres øverst på siden */
-  box-shadow: 2px 2px 8px #6c524e; /* Skyggeeffekt omkring navbar */ /* 2 over, 2 under, blurriness, farve */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #FDF4F1;
+  z-index: 1000;
+  box-shadow: 2px 2px 8px #6C524E;
 }
 
-/* Indre boks i navbar, holder styr på elementer */
 .navbar__container {
-  max-width: 1200px; /* Holder navbarens indhold max 1200px bredt */
-  margin: 0 auto; /* 0: top/bottom   auto: left/right */
-  padding: 0.5rem 0.5rem; /* Padding fra indhold til sider */
-  display: flex; /* Flex container: indhold på linje  */
-  align-items: center; /* Centreret */
-  justify-content: space-between; /* Fordeles horisontalt */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .navbar__logo-image {
-  height: 120px; /* Logo højde */
-  width: auto; /* Bevarer billedets proportioner */
+  height: 100px;
+  width: auto;
 }
 
 .navbar__list {
-  list-style: none; /* Fjerner punkt eller tal foran */
-  display: flex; /* Indhold på linje  */
-  gap: 2rem; /* Mellemrum mellem knapper */
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
 }
 
-/* Knapper i Navbar */
-.navbar__link {
-  display: inline-block; /* Bevarer billedets proportioner */
-  background-color: #6b4f4b; /* Baggrundsfarve på knapper */
-  color: #fdf4f1; /* Skriftfarve tekst knapper */
-  width: 130px; /* Bredde på knapper (alle) */
-  text-align: center; /* Teksten i midten af knap */
-  font-weight: normal; /* Hvor tynd/fed tekst er */
-  text-transform: uppercase; /* Alle bogstaver er store bogstaver  */
-  padding: 0.6rem 1.5rem; /* Padding om tekst i knapper */
-  text-decoration: none; /* Fjerner understregning i link */
-  font-size: 1rem; /* Tekststørrelse: tekst i knapper */
-  transition: background-color 0.3s ease; /* Transition baggrundsfarve til hover */
-  border-radius: 10px 80px 10px 80px; /* Hjørner på knapper */
-  line-height: 1; /* Bevarer billedets proportioner */
-  font-family: "Bebas Neue"; /* Bevarer billedets proportioner */
+.navbar__button {
+  background-color: #6C524E;
+  color: #FDF4F1;
+  width: 130px;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 10px 80px 10px 80px;
+  font-family: "Cinzel";
+  font-weight: 400;
+  line-height: 1;
 }
 
-/* Knapper: hover */
-.navbar__link:hover {
-  background-color: #49322f; /* Farve på hover effekt  */
-  transform: scale(1.08); /* Skalerer knappen op */
+.navbar__button:hover {
+  background-color: #49322f;
+  transform: scale(1.05);
 }
 
-/* Plads fra navbar til indhold: navbar til body */
 body::before {
-  content: ""; /* Pseudo-elementet eksisterer, ingen synlig tekst. */
-  display: block; /* En blok: kan have højde og bredde */
-  height: 30px; /* højde på 'blokken' */
+  content: "";
+  display: block;
+  height: 30px;
 }
 
-/* Hero section: sektion: call to action på forsiden */
+/* Hero */
 .hero {
-  height: 105vh;
-  padding: 4rem 2rem;
-  background-color: #dac8b4;
+  min-height: 100vh;
+  padding: 6rem 1.5rem 3rem;
+  background-color: #DAC8B4;
   display: flex;
   align-items: center;
 }
@@ -104,8 +103,7 @@ body::before {
 
 .hero__text {
   flex: 1;
-  font-family: "Calisto MT", serif;
-  order: 2; /* Tilføjet for at rykke teksten til højre */
+  order: 2;
 }
 
 .hero__text h1 {
@@ -115,88 +113,254 @@ body::before {
 }
 
 .hero__text p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #0e0e0e;
   line-height: 1.6;
-  font-family: "Gill Sans Nova", serif;
-  font-weight: normal;
+  font-family: "Cambria", serif;
+  font-weight: 400;
 }
 
 .hero__image {
   flex: 1;
-  text-align: left;
+  order: 1;
+  text-align: center;
 }
 
 .hero__image img {
-  max-width: 100%;
-  height: 70vh;
-  border-radius: 1rem;
-}
-
-.hero__image {
-  flex: 1;
-  text-align: left;
-  order: 1; /* Tilføjet for at rykke billedet til venstre */
+  max-width: 75%;
+  height: auto;
+  
+  margin-bottom: 2rem;
 }
 
 .hero__button {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.75rem 2rem;
-  background-color: #6d504a; /* Mørk brun nuance fra billedet */
-  color: #fdf4f1;
+  background-color: #6C524E;
+  color: #FDF4F1;
   text-decoration: none;
-  font-family: "Bebas Neue";
-  font-weight: normal;
-  font-size: 1rem;
-  border-radius: 10px 80px 10px 80px; /* Asymmetrisk runding */
-  transition: background-color 0.3s ease;
-  text-align: center;
+  font-family: "Cinzel";
+  font-weight: 400;
+  font-size: 0.9rem;
+  border-radius: 10px 80px 10px 80px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .hero__button:hover {
-  background-color: #49322f; /* En lidt mørkere hover-effekt */
-  font-family: "Bebas Neue";
-  transform: scale(1.05); /* Gør knappen lidt større */
+  background-color: #49322f;
+  transform: scale(1.05);
 }
 
-/* LYS SEKTION */
+/* Projekter */
 .projekter {
-  background-color: #fdf4f1; /* lys baggrund */
-  padding: 3rem 2rem;
-  font-family: "Calisto MT", serif;
-  color: #0e0e0e;
+  background-color: #FDF4F1;
+  padding: 6rem 1.5rem 3rem;
 }
 
-/* PROJEKTER */
-.projekter__content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  max-width: 1000px;
+.projekter__container {
+  max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* gør layoutet responsivt */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
 }
 
-.projekter__images img {
-  max-width: 150px;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  display: block;
+.projekter__tekst {
+  font-family: "Cambria", Georgia, serif;
+  font-weight: 400;
 }
 
-.projekter__text h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
+.projekter__overskrift {
+  font-size: 1.2rem;
   text-transform: uppercase;
-  font-family: "Cinzel", serif;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  color: #0E0E0E;
   text-align: left;
 }
 
-.list-section__text ul {
+.projekter__liste {
   list-style-type: disc;
   padding-left: 1.5rem;
   line-height: 1.8;
-  font-size: 1.1rem;
+  font-family: "Cambria", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #0E0E0E;
+}
+
+.projekter__button {
+ display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #6C524E;
+  color: #FDF4F1;
+  text-decoration: none;
+  font-family: "Cinzel";
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
+  border-radius: 10px 80px 10px 80px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.projekter__button:hover {
+  background-color: #49322f;
+  transform: scale(1.05);
+}
+
+.projekter__billeder {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.projekter__billede {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.projekter__caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-family: "Cambria", Georgia, serif;
+  font-weight: 400;
+  color: #0E0E0E;
+}
+
+
+
+.kontaktmigher {
+  background-color: #DAC8B4;
+  padding: 6rem 1.5rem 3rem;
+}
+
+.kontaktmigher__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.kontaktmigher__tekst {
+  font-family: "Cambria", Georgia, serif;
+  font-weight: 400;
+}
+
+.kontaktmigher__overskrift {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  color: #0E0E0E;
+  text-align: left;
+}
+
+.kontaktmigher__tekst p {
+  font-size: 1rem;
+  color: #0e0e0e;
+  line-height: 1.6;
+  font-family: "Cambria", serif;
+  font-weight: 400;
+}
+
+
+.kontaktmigher__button {
+ display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #6C524E;
+  color: #FDF4F1;
+  text-decoration: none;
+  font-family: "Cinzel";
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
+  border-radius: 10px 80px 10px 80px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.kontaktmigher__button:hover {
+  background-color: #49322f;
+  transform: scale(1.05);
+}
+
+.kontaktmigher__billeder {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.kontaktmigher__billede {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+/* Responsiv justering */
+@media (max-width: 768px) {
+  .navbar__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__list {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .hero__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+ .navbar__button {
+    width: 100%;
+    display: block;
+  }
+ 
+
+  .hero__text,
+  .hero__image {
+    order: unset;
+    flex: unset;
+    width: 100%;
+  }
+
+  .projekter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projekter__billeder {
+    flex-direction: column;
+  }
+
+  .indholdIndex1,
+  .indholdIndex2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projekter__billeder img {
+    max-width: 100%;
+  }
+
+  .navbar__logo-image {
+    height: 80px;
+  }
 }

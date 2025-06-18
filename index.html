@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Gøres responsiv -->
     <title>somoddesign.dk</title>
-    <!-- Vises i bowser -->
+    <!-- Vises i browser -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Linker til css-->
   </head>
@@ -19,39 +19,33 @@
   <body>
     <!-- Header -->
     <header class="navbar">
-      <!-- Navbar: Gør det muligt at style via css som en navigation-->
       <div class="navbar__container">
-        <!-- en boks (container), som holder og organiserer indholdet i en menulinje (navigation bar) -->
         <a href="#" class="navbar__logo">
-          <img
-            src="billeder/logo.svg"
-            alt="Mit logo"
-            class="navbar__logo-image"
-          />
-          <!-- SVG-logo (som fil) -->
+        <img src="billeder/logo.svg" alt="Mit logo" class="navbar__logo-image"/>
         </a>
 
-        <!-- navbar -->
-        <nav class="navbar__menu">
-          <ul class="navbar__list">
-            <li class="navbar__item">
-              <a href="#hjem" class="navbar__link">Hjem</a>
-            </li>
-            <li class="navbar__item">
-              <a href="#om" class="navbar__link">Om mig</a>
-            </li>
-            <li class="navbar__item">
-              <a href="#projekter" class="navbar__link">Projekter</a>
-            </li>
-            <li class="navbar__item">
-              <a href="#kontakt" class="navbar__link">Kontakt</a>
-            </li>
-          </ul>
-        </nav>
+      <nav class="navbar__menu">
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a href="#index.html" class="navbar__button">Hjem</a> 
+          </li>
+          <li class="navbar__item">
+             <a href="#ommig.html" class="navbar__button">Om mig</a>
+          </li>
+         <li class="navbar__item">
+             <a href="#projekter.html" class="navbar__button">Projekter</a>
+         </li>
+         <li class="navbar__item">
+             <a href="#kontakt.html" class="navbar__button">Kontakt</a>
+         </li>
+        </ul>
+      </nav>
       </div>
     </header>
 
-    <!-- HERO sektion: Velkommen -->
+<main>
+
+  <!-- HERO sektion -->
     <section class="hero">
       <div class="hero__content">
         <div class="hero__text">
@@ -67,33 +61,55 @@
             <br />
             Er du nysgerrig på hvem jeg er?
           </p>
-
           <!-- Læs mere her knap-->
           <a href="#læsmereher" class="hero__button">LÆS MERE HER</a>
         </div>
         <div class="hero__image">
-          <img src="billeder/hero.png" alt="Portræt eller designbillede" />
+          <img src="billeder/hero.png" alt="Portræt på forsiden" />
         </div>
       </div>
     </section>
 
-    <!-- PROJEKTER -->
-    <section class="projekter">
-      <div class="projekter__content">
-        <div class="projekter__images">
-          <img src="billeder/før.png" alt="Billede 1" />
-          <img src="billeder/efter.png" alt="Billede 2" />
-        </div>
-        <div class="projekter__text">
-          <h2>Har du brug for:</h2>
-          <ul>
-            <li>Oprettelse eller optimering af dit webdesign?</li>
-            <li>Kreativ content creation tilpasset alle platforme?</li>
-            <li>Et nyt unikt logo?</li>
-            <li>Udtryksfuldt videoproduktion og fotografering?</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<!-- SE PROJEKTER SEKTION -->
+  <section class="projekter">
+    <div class="projekter__container">
+      <div class="projekter__tekst">
+        <h2 class="projekter__overskrift">Har du brug for:</h2>
+        <ul class="projekter__liste">
+        <li>Oprettelse eller optimering af dit webdesign?</li>
+        <li>Kreativ content creation tilpasset alle platforme?</li>
+        <li>Et nyt unikt logo?</li>
+        <li>Udtryksfuldt videoproduktion og fotografering?</li>
+      </ul>
+      <a href="#" class="projekter__button">Se portfolio her</a>
+    </div>
+    <div class="projekter__billeder">
+      <img src="billeder/redesignfør.png" alt="Webdesign eksempel" class="projekter__billede">
+      <img src="billeder/redesignefter.png" alt="Bowling hjemmeside" class="projekter__billede">
+      <p class="projekter__caption">Redesign af hjemmeside</p>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT MIG HER SEKTION -->
+<section class="kontaktmigher">
+  <div class="kontaktmigher__container">
+    <div class="kontaktmigher__tekst">
+      <p>
+        Er du klar til at bringe din cafés atmosfære til live i dit visuelle udtryk?
+      </p>
+      <a href="#" class="kontaktmigher__button">Kontakt mig her</a>
+    </div>
+    <div class="kontaktmigher__billeder">
+      <img src="billeder/bord1.jpg" alt="Webdesign eksempel" class="projekter__billede">
+      <img src="billeder/bord2.jpg" alt="Bowling hjemmeside" class="projekter__billede">
+    </div>
+  </div>
+</section>
+
+
+
+
+</main>
   </body>
 </html>
