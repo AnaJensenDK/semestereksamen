@@ -49,7 +49,7 @@ h3 {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   flex-wrap: wrap;
 }
@@ -129,7 +129,8 @@ body::before {
 .hero__image img {
   max-width: 50%;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
 .hero__button {
@@ -219,7 +220,7 @@ body::before {
 .projekter__billede {
   width: 100%;
   max-width: 320px;
-  border-radius: 0.5rem;
+  border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -301,15 +302,98 @@ body::before {
 .kontaktmigher__billede {
   width: 100%;
   max-width: 320px;
-  border-radius: 0.5rem;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.minekomp {
+  background-color: #FDF4F1;
+  padding: 6rem 1.5rem 3rem;
+}
+
+.minekomp__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.minekomp__tekst {
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 400;
+}
+
+
+.minekomp__billeder {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.minekomp__billede {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 
+.footer {
+  background-color: #DAC8B4;
+  color: #0e0e0e;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 100%;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  gap: 13rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__billede {
+  height: 100%;
+}
+
+.footer__tekst p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-family: Cambria;
+}
+
+
+
+
+
+
+
 /* Responsiv justering */
 @media (max-width: 768px) {
+
+  .navbar {
+    height: 298px;
+  }
+
+  main {
+    padding-top: 180px;
+    width: 100%;
+  }
+
   .navbar__container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;                  /* Fjernet auto margin */
+    padding-left: 1rem;         /* Luft i siderne */
+    padding-right: 1rem;
+    box-sizing: border-box;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -317,13 +401,60 @@ body::before {
   .navbar__list {
     flex-direction: column;
     gap: 1rem;
-    margin-top: 1rem;
+    margin: 1rem 0 0 0;         /* Fjernet margin: 0 auto; ændret til margin-top */
     width: 100%;
+  }
+
+
+  .footer__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Sørger for at den tilpasser sig mindre skærme */
+  padding: 1rem;
+  gap: 1rem;
+
+}
+
+  .hero__content,
+  .projekter__container,
+  .kontaktmigher__container,
+  .minekomp__container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;                  /* Fjernet margin: 0 auto */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
   }
 
   .hero__content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .navbar__button {
+    width: 100%;
+    display: block;
+  }
+
+  .navbar__menu {
+    width: 100%;
+  }
+
+  .hero__button {
+    width: 100%;
+  }
+
+  .projekter__button {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .kontaktmigher__button {
+    width: 100%;
+    font-size: 0.7rem;
   }
 
   .hero__text,
@@ -342,11 +473,7 @@ body::before {
     flex-direction: column;
   }
 
-  .indholdIndex1,
-  .indholdIndex2 {
-    display: flex;
-    flex-direction: column;
-  }
+  
 
   .projekter__billeder img {
     max-width: 100%;
@@ -355,4 +482,13 @@ body::before {
   .navbar__logo-image {
     height: 80px;
   }
+
+
+  html, body {
+  overflow-x: hidden;
 }
+
+}
+
+
+
