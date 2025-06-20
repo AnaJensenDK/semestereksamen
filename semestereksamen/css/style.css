@@ -342,7 +342,6 @@ body::before {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-
 .footer {
   background-color: #DAC8B4;
   color: #0e0e0e;
@@ -366,13 +365,8 @@ body::before {
 .footer__tekst p {
   margin: 0;
   font-size: 0.9rem;
-  font-family: Cambria;
+  font-family: "Cambria";
 }
-
-
-
-
-
 
 
 /* Responsiv justering */

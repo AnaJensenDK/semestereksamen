@@ -292,10 +292,14 @@ h3 {
 
   /* Containerer */
   .ommig__container,
-  .mereommig__container,
-  .video__container {
-    width: 100%;
+  .mereommig__container {
     max-width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  .video__container {
+    max-width: 30%;
     margin: 0;
     padding: 0 1rem;
     box-sizing: border-box;
